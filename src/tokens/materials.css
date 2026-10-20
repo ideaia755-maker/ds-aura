@@ -1,0 +1,27 @@
+:root {
+  --aura-glass-opacity: 0.72;
+  --aura-glass-blur: 16px;
+  --aura-glass-blur-large: 24px;
+  --aura-edge-subtle: rgba(255, 255, 255, 0.06);
+  --aura-edge-default: rgba(255, 255, 255, 0.10);
+  --aura-edge-highlight: rgba(255, 255, 255, 0.16);
+  --aura-reflection-opacity: 0.08;
+  --aura-material-glass-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.094), rgba(255, 255, 255, 0.042));
+  --aura-material-glass-edge: inset 0 1px 0 var(--aura-edge-highlight), inset 0 -1px 0 rgba(0, 0, 0, 0.20);
+  --aura-material-metal-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.035));
+  --aura-material-metal-edge: inset 0 1px 0 rgba(255, 255, 255, 0.20), inset 0 -1px 0 rgba(0, 0, 0, 0.32);
+  --aura-surface-highlight: radial-gradient(circle at var(--aura-pointer-x, 50%) var(--aura-pointer-y, 0%), rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.075) 34%, transparent 66%);
+  --aura-surface-reflection: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, var(--aura-reflection-opacity)) 44%, transparent 68%);
+}
+
+.light {
+  --aura-glass-opacity: 0.78;
+  --aura-edge-subtle: rgba(255, 255, 255, 0.54);
+  --aura-edge-default: rgba(255, 255, 255, 0.68);
+  --aura-edge-highlight: rgba(255, 255, 255, 0.82);
+  --aura-reflection-opacity: 0.18;
+  --aura-material-glass-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.34));
+  --aura-material-glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.92), inset 0 -1px 0 rgba(90, 84, 74, 0.14);
+  --aura-material-metal-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.64), rgba(188, 184, 176, 0.32));
+  --aura-material-metal-edge: inset 0 1px 0 rgba(255, 255, 255, 0.92), inset 0 -1px 0 rgba(80, 74, 68, 0.24);
+}

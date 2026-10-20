@@ -1,0 +1,49 @@
+:root {
+  --aura-violet-700: #6d28d9;
+  --aura-violet-600: #7c3aed;
+  --aura-violet-500: #8b5cf6;
+  --aura-violet-400: #a78bfa;
+  --aura-purple-700: #7e22ce;
+  --aura-purple-600: #9333ea;
+  --aura-purple-500: #a855f7;
+  --aura-purple-400: #c084fc;
+  --aura-orange-deep: #c2410c;
+  --aura-orange-base: #ff7a18;
+  --aura-orange-bright: #ff9a3c;
+  --aura-success: #22c55e;
+  --aura-info: #3b82f6;
+  --aura-warning: #f59e0b;
+  --aura-error: #ef4444;
+  --aura-error-hot: #ff5a36;
+  --aura-error-bright: #ff8a4c;
+  --aura-focus-ring: rgba(167, 139, 250, 0.72);
+  --aura-on-accent: rgba(255, 255, 255, 0.96);
+}
+
+.dark {
+  --aura-world: #030305;
+  --aura-surface-1: #07070a;
+  --aura-surface-2: #0b0b10;
+  --aura-surface-3: #101017;
+  --aura-surface-4: #15151e;
+  --aura-surface-5: #1b1b25;
+  --aura-text-primary: rgba(255, 255, 255, 0.94);
+  --aura-text-secondary: rgba(255, 255, 255, 0.70);
+  --aura-text-tertiary: rgba(255, 255, 255, 0.50);
+  --aura-text-muted: rgba(255, 255, 255, 0.36);
+}
+
+.light {
+  --aura-world: #f4f2ee;
+  --aura-surface-1: #f7f6f3;
+  --aura-surface-2: #efeee9;
+  --aura-surface-3: #e8e6e1;
+  --aura-surface-4: #deddd8;
+  --aura-surface-5: #d5d3ce;
+  --aura-text-primary: rgba(20, 20, 22, 0.94);
+  --aura-text-secondary: rgba(20, 20, 22, 0.68);
+  --aura-text-tertiary: rgba(20, 20, 22, 0.50);
+  --aura-text-muted: rgba(20, 20, 22, 0.38);
+  --aura-focus-ring: rgba(109, 40, 217, 0.52);
+  --aura-on-accent: rgba(255, 255, 255, 0.98);
+}

@@ -1,0 +1,26 @@
+:root {
+  --aura-duration-instant: 80ms;
+  --aura-duration-micro: 140ms;
+  --aura-duration-fast: 220ms;
+  --aura-duration-normal: 360ms;
+  --aura-duration-slow: 560ms;
+  --aura-duration-event: 900ms;
+  --aura-duration-cinema: 1400ms;
+  --aura-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --aura-ease-physical: cubic-bezier(0.16, 1, 0.3, 1);
+  --aura-ease-soft: cubic-bezier(0.25, 0.8, 0.25, 1);
+  --aura-motion-transform: translateY(0);
+  --aura-motion-press: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --aura-duration-micro: 1ms;
+    --aura-duration-fast: 1ms;
+    --aura-duration-normal: 1ms;
+    --aura-duration-slow: 1ms;
+    --aura-duration-event: 1ms;
+    --aura-duration-cinema: 1ms;
+    --aura-motion-press: translateY(0);
+  }
+}
