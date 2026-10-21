@@ -3,7 +3,7 @@ import { AuraProvider } from "@/foundation/aura-provider";
 import { AURASurface } from "@/components/aura";
 import { Button } from "@/components/ui/button";
 
-const variants = ["default", "secondary", "outline", "ghost", "destructive"] as const;
+const variants = ["default", "secondary", "outline", "ghost", "destructive", "gradient"] as const;
 const auras = ["none", "primary", "energy", "success", "warning", "error"] as const;
 
 export function ButtonShowcase() {
@@ -24,15 +24,26 @@ export function ButtonShowcase() {
 
   return (
     <AuraProvider theme={theme} motion={reducedMotion ? "reduced" : "full"} performance="standard">
-      <main className="min-h-screen px-5 py-6 sm:px-8 lg:px-10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6">
-          <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="mb-2 text-sm font-medium text-[color:var(--aura-text-secondary)]">AURA Laboratory</p>
-              <h1 className="aura-title-mark m-0 text-3xl text-[color:var(--aura-text-primary)]">
-                Button foundation
+      <main className="aura-grid-canvas min-h-screen px-5 py-8 sm:px-8 lg:px-12 text-slate-100">
+        <div className="mx-auto flex max-w-6xl flex-col gap-8">
+          {/* AURA Signature Hero Headline & Badges */}
+          <header className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <span className="aura-badge">
+                  <span className="aura-badge-text-gradient">AURA 2.0</span>
+                </span>
+                <span className="aura-badge">
+                  <span className="aura-badge-text-subtle">Physical Digital Object</span>
+                </span>
+              </div>
+              <h1 className="aura-headline text-4xl sm:text-5xl tracking-tight">
+                <span className="aura-headline-solid block">Все нейросети</span>
+                <span className="aura-headline-gradient block">в одном месте</span>
               </h1>
-              <p className="aura-font-display mt-3 text-xs text-[color:var(--aura-text-secondary)]">ARK-7 / AURA DISPLAY</p>
+              <p className="text-sm text-slate-400 max-w-md">
+                Интерфейс парит над координатным пространством, обладая физической массой, живым светом и тактильным откликом.
+              </p>
             </div>
             <div className="flex flex-wrap gap-2">
               {modes.map((mode) => (
@@ -52,20 +63,46 @@ export function ButtonShowcase() {
             </div>
           </header>
 
-          <AURASurface className="grid gap-5 p-5 sm:p-6" elevation="E3" aura={aura} auraIntensity={2} material={material}>
+          {/* Flagship CTA Hero Button */}
+          <div className="flex flex-wrap items-center gap-4 py-2">
+            <Button variant="gradient" size="lg" className="px-8 py-3.5 text-base">
+              ПОПРОБОВАТЬ БЕСПЛАТНО
+            </Button>
+            <span className="text-xs text-slate-400">
+              ← Флагманская капсула с фирменным градиентом и световым переливом шрифта
+            </span>
+          </div>
+
+          {/* Floating Levitating Card Surface */}
+          <AURASurface floating className="grid gap-6 p-6 sm:p-8 rounded-3xl" elevation="E3" aura={aura} auraIntensity={2} material={material}>
+            <div className="flex items-center justify-between border-b border-white/8 pb-4">
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5">
+                  <div className="h-3 w-3 rounded-full bg-red-500/80" />
+                  <div className="h-3 w-3 rounded-full bg-amber-500/80" />
+                  <div className="h-3 w-3 rounded-full bg-emerald-500/80" />
+                </div>
+                <span className="text-xs font-mono text-slate-400">aura · floating · studio</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-xs text-emerald-400 font-medium">levitating</span>
+              </div>
+            </div>
+
             <section>
-              <h2 className="mb-3 text-sm font-semibold uppercase text-[color:var(--aura-text-secondary)]">Variants</h2>
-              <div className="flex flex-wrap gap-3">
+              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-400">Кнопки: Варианты</h2>
+              <div className="flex flex-wrap items-center gap-3">
                 {variants.map((variant) => (
                   <Button key={variant} variant={variant} material={material} aura={aura}>
-                    {variant}
+                    {variant === "gradient" ? "ПОПРОБОВАТЬ БЕСПЛАТНО" : variant}
                   </Button>
                 ))}
               </div>
             </section>
 
             <section>
-              <h2 className="mb-3 text-sm font-semibold uppercase text-[color:var(--aura-text-secondary)]">States</h2>
+              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-400">Физические состояния</h2>
               <div className="flex flex-wrap gap-3">
                 <Button material={material} aura={aura}>Default</Button>
                 <Button material={material} aura={aura} data-pressed="true">Pressed</Button>
@@ -79,7 +116,7 @@ export function ButtonShowcase() {
             </section>
 
             <section>
-              <h2 className="mb-3 text-sm font-semibold uppercase text-[color:var(--aura-text-secondary)]">Mercury merge prototype</h2>
+              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-400">Mercury merge prototype</h2>
               <div className="aura-processing-stage flex flex-wrap gap-3">
                 <Button material={material} aura="primary" processing size="lg">
                   Processing
@@ -88,7 +125,7 @@ export function ButtonShowcase() {
             </section>
 
             <section>
-              <h2 className="mb-3 text-sm font-semibold uppercase text-[color:var(--aura-text-secondary)]">Aura</h2>
+              <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-400">Семантическая Аура</h2>
               <div className="flex flex-wrap gap-3">
                 {auras.map((item) => (
                   <Button

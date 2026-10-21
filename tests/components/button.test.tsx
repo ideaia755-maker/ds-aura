@@ -15,6 +15,11 @@ describe("Button", () => {
     expect(screen.getByRole("button", { name: "Small" })).toHaveClass("aura-button--secondary", "aura-button--sm");
   });
 
+  it("supports flagship gradient and pill variants", () => {
+    render(<Button variant="gradient">Try Free</Button>);
+    expect(screen.getByRole("button", { name: "Try Free" })).toHaveClass("aura-button--gradient");
+  });
+
   it("supports disabled", async () => {
     const onClick = vi.fn();
     render(<Button disabled onClick={onClick}>Disabled</Button>);

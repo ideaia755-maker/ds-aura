@@ -6,6 +6,8 @@
   --aura-shadow-e4: 0 24px 60px rgba(0, 0, 0, 0.24), 0 8px 18px rgba(0, 0, 0, 0.14);
   --aura-shadow-e5: 0 32px 80px rgba(0, 0, 0, 0.30), 0 12px 24px rgba(0, 0, 0, 0.16);
   --aura-shadow-e6: 0 48px 120px rgba(0, 0, 0, 0.36);
+  --aura-shadow-floating: 0 24px 60px -12px rgba(0, 0, 0, 0.85), 0 12px 28px -8px rgba(3, 7, 18, 0.9), 0 0 40px -10px rgba(56, 189, 248, 0.14);
+  --aura-rim-light-cyan: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset -1px 0 0 rgba(56, 189, 248, 0.25);
   --aura-pressed-shadow: var(--aura-shadow-e1);
 
   --aura-depth-y-e0: 0px;

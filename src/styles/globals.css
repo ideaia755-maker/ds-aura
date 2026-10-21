@@ -779,6 +779,138 @@ select {
   border-color: color-mix(in srgb, var(--aura-error-hot) 42%, var(--aura-edge-default));
 }
 
+/* AURA Flagship Gradient Pill Button */
+.aura-button--gradient,
+.aura-button--pill {
+  border-radius: 9999px !important;
+  background: var(--aura-gradient-signature, linear-gradient(90deg, #c084fc 0%, #a855f7 32%, #60a5fa 72%, #38bdf8 100%)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  box-shadow:
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.45),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.25),
+    0 4px 20px -2px rgba(168, 85, 247, 0.45),
+    0 6px 28px -4px rgba(56, 189, 248, 0.40) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+}
+
+.aura-button--gradient .aura-button__content,
+.aura-button--pill .aura-button__content {
+  background: var(--aura-gradient-text-light, linear-gradient(90deg, #ffffff 0%, #fae8ff 35%, #eff6ff 70%, #f0fdfa 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.aura-button--gradient:hover:not(:disabled),
+.aura-button--pill:hover:not(:disabled) {
+  box-shadow:
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.6),
+    0 6px 28px 0px rgba(168, 85, 247, 0.65),
+    0 8px 36px 0px rgba(56, 189, 248, 0.55) !important;
+  filter: brightness(1.08);
+}
+
+.aura-button--gradient:active:not(:disabled),
+.aura-button--pill:active:not(:disabled) {
+  transform: scale(0.97) translateY(1px) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(0, 0, 0, 0.3),
+    0 2px 14px rgba(168, 85, 247, 0.35),
+    0 3px 18px rgba(56, 189, 248, 0.30) !important;
+}
+
+/* Floating Levitating Card Surface */
+.aura-surface[data-aura-floating="true"],
+.aura-surface--floating {
+  border: 1px solid rgba(56, 189, 248, 0.28) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset -1px 0 0 rgba(56, 189, 248, 0.20),
+    inset 0 0 24px rgba(56, 189, 248, 0.04),
+    0 24px 60px -12px rgba(0, 0, 0, 0.88),
+    0 12px 28px -8px rgba(2, 6, 23, 0.95),
+    0 0 44px -10px rgba(56, 189, 248, 0.18) !important;
+  transform: translateY(-2px);
+  transition:
+    transform var(--aura-duration-normal) var(--aura-ease-physical),
+    box-shadow var(--aura-duration-normal) var(--aura-ease-physical),
+    border-color var(--aura-duration-normal) var(--aura-ease-standard);
+}
+
+.aura-surface[data-aura-floating="true"]:hover,
+.aura-surface--floating:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.42) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset -1px 0 0 rgba(56, 189, 248, 0.30),
+    inset 0 0 32px rgba(56, 189, 248, 0.06),
+    0 32px 72px -12px rgba(0, 0, 0, 0.92),
+    0 16px 36px -8px rgba(2, 6, 23, 0.95),
+    0 0 56px -8px rgba(56, 189, 248, 0.24) !important;
+}
+
+/* AURA Headline & Typography with light gradients */
+.aura-headline {
+  font-family: var(--aura-font-ui);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.aura-headline-solid {
+  background: linear-gradient(180deg, #ffffff 30%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aura-headline-gradient {
+  background: var(--aura-gradient-headline, linear-gradient(90deg, #d8b4fe 0%, #c084fc 25%, #a855f7 50%, #60a5fa 75%, #38bdf8 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Badges with delicate light gradients */
+.aura-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all var(--aura-duration-fast) var(--aura-ease-standard);
+}
+
+.aura-badge-text-subtle {
+  background: var(--aura-gradient-text-subtle, linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aura-badge-text-gradient {
+  background: var(--aura-gradient-headline, linear-gradient(90deg, #e9d5ff 0%, #c084fc 40%, #93c5fd 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Background coordinate grid matrix */
+.aura-grid-canvas {
+  background-color: #07070d;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 .aura-button[data-aura="none"] {
   --aura-button-aura-color: transparent;
 }

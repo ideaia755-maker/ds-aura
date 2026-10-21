@@ -16,6 +16,13 @@
   --aura-error: #ef4444;
   --aura-error-hot: #ff5a36;
   --aura-error-bright: #ff8a4c;
+  --aura-cyan-400: #38bdf8;
+  --aura-cyan-500: #06b6d4;
+  --aura-blue-400: #60a5fa;
+  --aura-gradient-signature: linear-gradient(90deg, #c084fc 0%, #a855f7 32%, #60a5fa 72%, #38bdf8 100%);
+  --aura-gradient-headline: linear-gradient(90deg, #d8b4fe 0%, #c084fc 25%, #a855f7 50%, #60a5fa 75%, #38bdf8 100%);
+  --aura-gradient-text-subtle: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  --aura-gradient-text-light: linear-gradient(90deg, #ffffff 0%, #fae8ff 35%, #eff6ff 70%, #f0fdfa 100%);
   --aura-focus-ring: rgba(167, 139, 250, 0.72);
   --aura-on-accent: rgba(255, 255, 255, 0.96);
 }

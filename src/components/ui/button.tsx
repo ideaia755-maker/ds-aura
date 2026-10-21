@@ -14,6 +14,8 @@ const buttonVariants = cva("aura-button", {
       outline: "aura-button--outline",
       ghost: "aura-button--ghost",
       destructive: "aura-button--destructive",
+      gradient: "aura-button--gradient",
+      pill: "aura-button--pill",
     },
     size: {
       sm: "aura-button--sm",

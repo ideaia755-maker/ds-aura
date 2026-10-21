@@ -7,6 +7,7 @@ export interface AURASurfaceProps extends React.HTMLAttributes<HTMLDivElement> {
   elevation?: AuraElevation;
   aura?: AuraName;
   auraIntensity?: AuraIntensity;
+  floating?: boolean;
 }
 
 export const AURASurface = React.forwardRef<HTMLDivElement, AURASurfaceProps>(
@@ -17,6 +18,7 @@ export const AURASurface = React.forwardRef<HTMLDivElement, AURASurfaceProps>(
       elevation = "E2",
       aura = "primary",
       auraIntensity = 1,
+      floating = false,
       style,
       children,
       ...props
@@ -25,11 +27,12 @@ export const AURASurface = React.forwardRef<HTMLDivElement, AURASurfaceProps>(
   ) => (
     <div
       ref={ref}
-      className={cn("aura-surface", className)}
+      className={cn("aura-surface", floating && "aura-surface--floating", className)}
       data-aura-material={material}
       data-aura-elevation={elevation}
       data-aura={aura}
       data-aura-intensity={auraIntensity}
+      data-aura-floating={floating || undefined}
       style={style}
       {...props}
     >

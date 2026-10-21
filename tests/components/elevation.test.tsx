@@ -21,4 +21,11 @@ describe("AURA elevation", () => {
     render(<AURASurface elevation="E5">Elevated</AURASurface>);
     expect(screen.getByText("Elevated")).toHaveAttribute("data-aura-elevation", "E5");
   });
+
+  it("supports floating levitation property", () => {
+    render(<AURASurface floating>Levitating Card</AURASurface>);
+    const el = screen.getByText("Levitating Card");
+    expect(el).toHaveAttribute("data-aura-floating", "true");
+    expect(el).toHaveClass("aura-surface--floating");
+  });
 });
