@@ -475,3 +475,11 @@ Do not add glow.
 Give light a meaning.
 
 Hide complexity behind simplicity.
+
+## 22. Approved ShenData developer identity
+
+For AI STUDIO ShenData applications, use the approved identity and original logos already included in `src/branding/` and `skills/razrabotchik/`. Studio and rights holder: **AI STUDIO ShenData**. Developer: **Константин Шендрик**.
+
+Read `skills/razrabotchik/SKILL.md` and `docs/components/developer-identity.md` when adding branding or an About screen. Prefer the exported DeveloperIdentity, DeveloperBadge, DeveloperAbout and DeveloperFooter components. Do not ask the user to locate logos or developer information again when this package is available.
+
+Keep original logo proportions and colors. The Shendrik mark is shared by the original developer/studio block; no separate studio symbol is approved. Product name, version, release year and license are supplied by each application. Do not carry over the production application's Mramorix Enterprise license, seats, activation fields or administrator details to other products. Do not invent contact details or legal particulars.
