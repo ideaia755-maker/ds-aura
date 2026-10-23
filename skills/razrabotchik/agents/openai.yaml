@@ -1,0 +1,7 @@
+interface:
+  display_name: "Разаработчик"
+  short_description: "Логотипы и сведения разработчика AI STUDIO ShenData"
+  icon_small: "./assets/shendrik-logo-color.png"
+  default_prompt: "Используй $razrabotchik для оформления приложения и сведений AI STUDIO ShenData."
+policy:
+  allow_implicit_invocation: true

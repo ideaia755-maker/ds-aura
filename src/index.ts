@@ -5,6 +5,8 @@ export { AURASurface } from "./components/aura";
 export { Button } from "./components/ui/button";
 export { LiquidMercuryProcessing } from "./components/signature/liquid-mercury";
 export { auraElevationProfiles, resolveElevationProfile } from "./lib/elevation";
+export { DeveloperIdentity, DeveloperBadge, DeveloperAbout, DeveloperFooter } from "./branding/developer-identity";
+export type { DeveloperProduct, DeveloperAboutProps, DeveloperBadgeProps } from "./branding/developer-identity";
 export type { ButtonProps } from "./components/ui/button";
 export type { AURASurfaceProps } from "./components/aura";
 export type { AuraElevationProfile } from "./lib/elevation";

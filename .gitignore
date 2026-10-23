@@ -1,5 +1,7 @@
 # Dependencies
 node_modules/
+verification/
+playwright.local.config.ts
 .pnp
 .pnp.js
 

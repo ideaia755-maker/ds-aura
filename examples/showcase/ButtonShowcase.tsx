@@ -2,6 +2,7 @@ import * as React from "react";
 import { AuraProvider } from "@/foundation/aura-provider";
 import { AURASurface } from "@/components/aura";
 import { Button } from "@/components/ui/button";
+import { DeveloperIdentity, DeveloperFooter } from "@/branding/developer-identity";
 
 const variants = ["default", "secondary", "outline", "ghost", "destructive", "gradient"] as const;
 const auras = ["none", "primary", "energy", "success", "warning", "error"] as const;
@@ -26,6 +27,7 @@ export function ButtonShowcase() {
     <AuraProvider theme={theme} motion={reducedMotion ? "reduced" : "full"} performance="standard">
       <main className="aura-grid-canvas min-h-screen px-5 py-8 sm:px-8 lg:px-12 text-slate-100">
         <div className="mx-auto flex max-w-6xl flex-col gap-8">
+          <div className="flex justify-end"><DeveloperIdentity productName="AURA UI" version="0.1.0" releaseYear={2026} /></div>
           {/* AURA Signature Hero Headline & Badges */}
           <header className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div className="space-y-3">
@@ -142,6 +144,7 @@ export function ButtonShowcase() {
               </div>
             </section>
           </AURASurface>
+          <DeveloperFooter releaseYear={2026} />
         </div>
       </main>
     </AuraProvider>
